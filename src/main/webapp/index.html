@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Incluir Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Incluir jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+
+    <style>
+        body {
+            background-color: #cce2fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #0b0b0b;
+        }
+
+        .container {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px; /* Limitar el ancho máximo */
+            width: 100%;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-family: 'Arial', sans-serif;
+            color: #333333;
+        }
+
+        @media (min-width: 576px) {
+            .form-group {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 20px;
+            }
+
+            .form-group label {
+                flex: 0 0 30%; /* Ancho máximo para las etiquetas */
+                margin-bottom: 0;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                flex: 0 0 70%; /* Ancho máximo para los campos de entrada */
+                margin-bottom: 10px; /* Espacio entre los campos */
+            }
+
+        }
+        .form-check-inline {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 35px; /* Espacio entre los elementos */
+        }
+
+        .btn {
+            width: 15%;
+            padding: 7px; /* Aumentar el tamaño de los botones */
+            font-size: 18px; /* Aumentar el tamaño del texto de los botones */
+            border-radius: 10px;
+            margin-bottom: 5px;
+        }
+        /*En Caso que se quiera agregar mas botones*/
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        /*En Caso que se quiera agregar mas botones*/
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border: none;
+        }
+
+        .btn-secondary:hover {
+            background-color: #414c53;
+        }
+        @media (max-width: 576px) {
+            .container {
+                padding: 20px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2 class="text-center">Formulario</h2>
+    <form action="ServletParametros" method="post">
+        <div class="form-group">
+            <label for="Nombre">Nombre:</label>
+            <input type="text" class="form-control" id="Nombre" name="Nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="Apellido">Apellido:</label>
+            <input type="text" class="form-control" id="Apellido" name="Apellido" required>
+        </div>
+        <div class="form-group">
+            <label for="Edad">Edad:</label>
+            <input type="int" class="form-control" id="Edad" name="Edad" required>
+        </div>
+        <div class="form-group">
+            <label for="Curso">Curso:</label>
+            <input type="text" class="form-control" id="Curso" name="Curso" required>
+        </div>
+        <div class="form-group">
+            <label>Género:</label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="Masculino" name="Genero" value="Masculino" required>
+                <label class="form-check-label" for="Masculino">Masculino</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="Femenino" name="Genero" value="Femenino" required>
+                <label class="form-check-label" for="Femenino">Femenino</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="No-binary" name="Genero" value="No-binary" required>
+                <label class="form-check-label" for="No-binary">No-binary</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Programas">Lenguajes de Programación:</label>
+            <select class="form-control" id="Programas" name="Programas" required>
+                <option value="">Selecciona</option>
+                <option value="C++">C++</option>
+                <option value="C-shark">C-shark</option>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Descripcion">Descripción:</label>
+            <textarea class="form-control" id="Descripcion" name="Descripcion" rows="5" required></textarea>
+        </div>
+        <div class="form-group text-center">
+            <button class="btn btn-secondary" type="reset">Eliminar</button>
+            <button class="btn btn-secondary" type="submit" value="Enviar">Enviar</button>
+        </div>
+    </form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
